@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --light: #F7F7F7;
+    --dark: #222222;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--light);
+}
+
+#app{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.notes-list{
+    flex-grow: 1;
+    padding: 10px 0px 10px 10px;
+    border-right: 1px solid #ebebeb;
+}
+
+.notes-list h1{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.note-list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.note-list-item:hover{
+    background-color: white;
+}
+
+.note-list-item p{
+    font-size: .8em;
+}
+
+.note-list-item button{
+    outline: none;
+    border:none;
+    background-color: var(--light);
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.note-list-item button:hover{
+    transform: scale(1.3);
+    background: #F6F6F6;
+}
+
+.note-details{
+    flex-grow: 4;
+    
+}
