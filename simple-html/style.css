@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosans/v27/o-0NIpQlx3QUlC5A4PNjThZlYw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosans/v27/o-0IIpQlx3QUlC5A4PNb4g.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --dark: #383350;
+  --med: #55506d;
+  --light: #e9e8e8;
+  --blue: #127fd8;
+  --red: #632132;
+}
+body {
+  background-color: var(--dark);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+#app {
+  width: 600px;
+  background-color: var(--med);
+}
+#app .header {
+  width: 100%;
+  height: 200px;
+  background-image: url('images/ian-stauffer-bH7kZ0yazB0-unsplash.jpg');
+  color: white;
+}
+#app .header .hero {
+  padding: 10px;
+}
+#app .header h2,
+#app .header p {
+  font-size: 4em;
+}
+#app .header p {
+  text-align: right;
+}
+#app .add-todo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app .add-todo form {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+#app .add-todo form label {
+  display: none;
+}
+#app .add-todo form ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--light);
+  opacity: 1;
+  /* Firefox */
+}
+#app .add-todo form input {
+  all: unset;
+  flex-grow: 1;
+  padding-left: 10px;
+  border-left: 1px solid var(--dark);
+  border-top: 1px solid var(--dark);
+  border-bottom: 1px solid var(--dark);
+  color: var(--light);
+}
+#app .add-todo form input:focus {
+  background-color: var(--dark);
+}
+#app .add-todo form button {
+  width: 50px;
+  height: 30px;
+  background-color: #079707;
+  border: none;
+  color: whitesmoke;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+#app .add-todo form button:hover {
+  cursor: pointer;
+}
+#app .todo-list {
+  padding: 0px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+#app .todo-list .list-item {
+  display: grid;
+  grid-template-columns: 0fr 6fr 1fr;
+  column-gap: 1px;
+  border-bottom: 1px solid var(--dark);
+  margin-bottom: 10px;
+}
+#app .todo-list .list-item:last-child {
+  border: none;
+  margin-bottom: 0;
+}
+#app .todo-list .list-item .check {
+  width: 30px;
+}
+#app .todo-list .list-item .desc {
+  display: grid;
+}
+#app .todo-list .list-item .desc input {
+  all: unset;
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  padding: 5px 3px;
+}
+#app .todo-list .list-item .desc input:focus {
+  background-color: var(--dark);
+}
+#app .todo-list .list-item .desc .strike {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  width: 90%;
+  height: 1px;
+  background-color: var(--dark);
+  z-index: 1;
+  pointer-events: none;
+}
+#app .todo-list .list-item .actions {
+  margin-left: 15px;
+}
+#app .todo-list .list-item .actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#app .todo-list .list-item .actions button span {
+  cursor: pointer;
+}
+#app .footer {
+  border-top: 1px solid var(--dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+#app .footer p {
+  font-size: 0.6em;
+  font-weight: bold;
+  color: #f7f7f7;
+}
+#app .footer .logout {
+  background-color: #632132;
+  border: none;
+  padding: 3px 10px;
+  color: var(--light);
+  cursor: pointer;
+}
+#app .footer .logout:hover {
+  opacity: 1;
+}
+.done {
+  text-decoration: line-through !important;
+  color: #ccc;
+}
+.edit {
+  color: rgba(211, 139, 7, 0.815);
+}
+.delete {
+  color: var(--red);
+}

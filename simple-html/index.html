@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Todo</title>
+    <script src="https://kit.fontawesome.com/e7cfee77eb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="hero">
+                <h2>Good Day</h2>
+                <p>Mayibongwe</p>
+            </div>
+            
+        </div>
+        <div class="add-todo">
+            <form action="">
+                <label for="todo-item"></label>
+                <input type="text" name="todo-item" placeholder="Add a New Item"/>
+                <button type="button"><span class="fa-solid fa-plus"></span></button>
+            </form>
+        </div>
+        <div class="todo-list">
+
+            <form class="list-item" action="">
+                <div class="check"><i class="fa-regular fa-square-check"></i></div>
+                <div class="desc">
+                    <input type="text" value="Buy tools for the weekend" name="item1" placeholder="item text here"/>
+                    <span class="strike"></span>
+                </div>
+                <div class="actions">
+                    <button class="edit"><span class="fa-solid fa-edit fa-xl"></span></button>
+                    <button class="delete"><span class="fa-solid fa-trash fa-xl"></span></button>
+                </div>
+            </form>
+
+            <form class="list-item" action="">
+                <div class="check"><i class="fa-regular fa-square"></i></div>
+                <div class="desc">
+                    <input type="text" value="Practice React" name="item1" placeholder="item text here"/>
+                    <!-- <span class="strike"></span> -->
+                </div>
+                <div class="actions">
+                    <button class="edit"><span class="fa-solid fa-edit fa-xl"></span></button>
+                    <button class="delete"><span class="fa-solid fa-trash fa-xl"></span></button>
+                </div>
+            </form>
+
+            <form class="list-item" action="">
+                <div class="check"><i class="fa-regular fa-square-check"></i></div>
+                <div class="desc">
+                    <input type="text" value="brush the cat" name="item1" placeholder="item text here"/>
+                    <span class="strike"></span>
+                </div>
+                <div class="actions">
+                    <button class="edit"><span class="fa-solid fa-edit fa-xl"></span></button>
+                    <button class="delete"><span class="fa-solid fa-trash fa-xl"></span></button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="footer">
+            <p>1 Item outstanding</p>
+            <button class="logout">Logout <span class="fa-solid fa-right-from-bracket"></span></button>
+        </div>
+    </div>
+</body>
+</html>
