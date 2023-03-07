@@ -9,8 +9,6 @@ class App{
         this.$footerText = document.querySelector(".footer").querySelector("p")
         console.log(this.$footerText);
 
-        // console.log(this.$submitBtn);
-
         this.loadNotes();
         this.addEventListenders();
         this.render();
@@ -27,7 +25,7 @@ class App{
                     console.log("logout button pressed");
                     break;
                 default:
-                    // console.log("Other Clicked");
+                    // handle other buttons
                     break;
             }
             
@@ -90,12 +88,12 @@ class App{
         this.Notes = [
             {
                 id: 1,
-                title: "Sample Note 1",
+                title: "Sample Incomplete Note",
                 complete: false
             },
             {
                 id: 2,
-                title: "Sample Note 2",
+                title: "Sample Complete Note",
                 complete: true
             }
         ];
@@ -108,7 +106,6 @@ class App{
             console.log("No notes in System, creating blank Notes");
             this.initializeNotes();
         }
-        // console.log(JSON.parse(this.Notes));
     }
 
     saveNotes(){
@@ -140,7 +137,6 @@ class App{
         this.$footerText.innerHTML = outCount + " Item(s) outstanding";
     }
 
-    // Crud Functions
     createNote(){
         const newNote = {
             "id": Date.now(),
@@ -151,10 +147,5 @@ class App{
         this.$addNewItemInput.value = "";
         this.saveNotes();
     }
-
-    deleteNote(id){
-        
-    }
-
     
 }
