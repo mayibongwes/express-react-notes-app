@@ -18,10 +18,11 @@
 }
 :root {
   --dark: #383350;
-  --med: #55506d;
+  --med: #5c5775;
   --light: #e9e8e8;
   --blue: #127fd8;
   --red: #632132;
+  --white: #ffffff;
 }
 body {
   background-color: var(--dark);
@@ -82,8 +83,6 @@ body {
   border-top: 1px solid var(--dark);
   border-bottom: 1px solid var(--dark);
   color: var(--light);
-}
-#app .add-todo form input:focus {
   background-color: var(--dark);
 }
 #app .add-todo form button {
@@ -109,6 +108,7 @@ body {
   column-gap: 1px;
   border-bottom: 1px solid var(--dark);
   margin-bottom: 10px;
+  color: var(--white);
 }
 #app .todo-list .list-item:last-child {
   border: none;
@@ -116,6 +116,7 @@ body {
 }
 #app .todo-list .list-item .check {
   width: 30px;
+  color: chartreuse;
 }
 #app .todo-list .list-item .desc {
   display: grid;
@@ -130,15 +131,19 @@ body {
 #app .todo-list .list-item .desc input:focus {
   background-color: var(--dark);
 }
-#app .todo-list .list-item .desc .strike {
+#app .todo-list .list-item .desc .strike,
+#app .todo-list .list-item .desc .active {
   grid-column: 1;
   grid-row: 1;
   align-self: center;
   width: 90%;
-  height: 1px;
+  height: 2px;
   background-color: var(--dark);
   z-index: 1;
   pointer-events: none;
+}
+#app .todo-list .list-item .desc .active {
+  background: none !important;
 }
 #app .todo-list .list-item .actions {
   margin-left: 15px;
@@ -182,4 +187,7 @@ body {
 }
 .delete {
   color: var(--red);
+}
+.metadata {
+  display: none !important;
 }

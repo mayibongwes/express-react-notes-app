@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/e7cfee77eb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body">
     <div id="app">
         <div class="header">
             <div class="hero">
@@ -26,7 +26,7 @@
         </div>
         <div class="todo-list">
 
-            <form class="list-item" action="">
+            <!-- <form class="list-item" action="">
                 <div class="check"><i class="fa-regular fa-square-check"></i></div>
                 <div class="desc">
                     <input type="text" value="Buy tools for the weekend" name="item1" placeholder="item text here"/>
@@ -42,7 +42,7 @@
                 <div class="check"><i class="fa-regular fa-square"></i></div>
                 <div class="desc">
                     <input type="text" value="Practice React" name="item1" placeholder="item text here"/>
-                    <!-- <span class="strike"></span> -->
+                    <span class="active"></span>
                 </div>
                 <div class="actions">
                     <button class="edit"><span class="fa-solid fa-edit fa-xl"></span></button>
@@ -60,7 +60,7 @@
                     <button class="edit"><span class="fa-solid fa-edit fa-xl"></span></button>
                     <button class="delete"><span class="fa-solid fa-trash fa-xl"></span></button>
                 </div>
-            </form>
+            </form> -->
 
         </div>
 
@@ -69,5 +69,9 @@
             <button class="logout">Logout <span class="fa-solid fa-right-from-bracket"></span></button>
         </div>
     </div>
+    <script src="./app.js"></script>
+    <script>
+        const app = new App();
+    </script>
 </body>
 </html>

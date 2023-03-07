@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&display=swap');
 
-
 *{
     margin: 0;
     padding: 0;
@@ -8,10 +7,11 @@
 
 :root{
     --dark: rgb(56, 51, 80);
-    --med: rgb(85, 80, 109);
+    --med: rgb(92, 87, 117);
     --light: rgb(233, 232, 232);
     --blue: rgb(18, 127, 216);
     --red: rgb(99, 33, 50);
+    --white: rgb(255, 255, 255);
 }
 
 body{
@@ -76,10 +76,7 @@ body{
                 border-top: 1px solid var(--dark);
                 border-bottom: 1px solid var(--dark);
                 color: var(--light);
-
-                &:focus{
-                    background-color: var(--dark);
-                }
+                background-color: var(--dark);
                 
             }
 
@@ -111,16 +108,16 @@ body{
             column-gap: 1px;
             border-bottom: 1px solid var(--dark);
             margin-bottom: 10px;
+            color: var(--white);
 
             &:last-child{
                 border:none;
                 margin-bottom: 0;
             }
 
-            
-
             .check{
                 width: 30px;
+                color: chartreuse;
             }
 
             .desc{
@@ -137,15 +134,19 @@ body{
                     }
                 }
 
-                .strike{
+                .strike, .active{
                     grid-column: 1;
                     grid-row: 1;
                     align-self: center;
                     width: 90%;
-                    height: 1px;
+                    height: 2px;
                     background-color: var(--dark);
                     z-index: 1;
                     pointer-events: none;
+                }
+
+                .active{
+                    background: none !important;
                 }
             }
             
@@ -206,4 +207,8 @@ body{
 
 .delete{
     color: var(--red);
+}
+
+.metadata{
+    display: none !important;
 }
